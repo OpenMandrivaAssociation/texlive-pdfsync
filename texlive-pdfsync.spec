@@ -1,3 +1,9 @@
+# revision 20373
+# category Package
+# catalog-ctan /macros/latex/contrib/pdfsync
+# catalog-date 2010-11-08 21:04:31 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-pdfsync
 Version:	20101108
 Release:	1
@@ -41,6 +47,7 @@ PDF viewer.
 %doc %{_texmfdistdir}/doc/latex/pdfsync/README
 %doc %{_texmfdistdir}/doc/latex/pdfsync/pdfsync-doc.pdf
 %doc %{_texmfdistdir}/doc/latex/pdfsync/pdfsync-doc.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,3 +58,5 @@ PDF viewer.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
