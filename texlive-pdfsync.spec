@@ -48,3 +48,17 @@ PDF viewer.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20101108-2
++ Revision: 754766
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20101108-1
++ Revision: 719224
+- texlive-pdfsync
+- texlive-pdfsync
+- texlive-pdfsync
+- texlive-pdfsync
+
