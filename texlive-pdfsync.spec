@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-pdfsync
 Version:	20101108
-Release:	4
+Release:	5
 Summary:	Provide links between source and PDF
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pdfsync
