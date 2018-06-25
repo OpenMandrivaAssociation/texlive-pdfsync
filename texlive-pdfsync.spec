@@ -5,7 +5,7 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-pdfsync
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Provide links between source and PDF
 Group:		Publishing
