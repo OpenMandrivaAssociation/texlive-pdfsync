@@ -1,6 +1,6 @@
 Name:		texlive-pdfsync
 Version:	20373
-Release:	1
+Release:	2
 Summary:	Provide links between source and PDF
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pdfsync
