@@ -3,7 +3,7 @@ Version:	20373
 Release:	2
 Summary:	Provide links between source and PDF
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pdfsync
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/pdfsync
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfsync.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfsync.doc.r%{version}.tar.xz
