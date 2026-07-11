@@ -1,44 +1,21 @@
-Name:		texlive-pdfsync
-Version:	20373
-Release:	2
+%global tl_name pdfsync
+%global tl_revision 79618
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	Provide links between source and PDF
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/pdfsync
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfsync.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfsync.doc.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfsync.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfsync.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package runs with pdfTeX or XeTeX, and creates an auxiliary
-file with geometrical information to permit references back and
-forth between source and PDF, assuming a conforming editor and
-PDF viewer.
+The package runs with pdfTeX or XeTeX, and creates an auxiliary file
+with geometrical information to permit references back and forth between
+source and PDF, assuming a conforming editor and PDF viewer.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/pdfsync/pdfsync.sty
-%doc %{_texmfdistdir}/doc/latex/pdfsync/README
-%doc %{_texmfdistdir}/doc/latex/pdfsync/pdfsync-doc.pdf
-%doc %{_texmfdistdir}/doc/latex/pdfsync/pdfsync-doc.tex
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
